@@ -4,7 +4,7 @@ ___
 
 Для установки на ваш компьютер нужно на локальном компьютере выполнить команду: 
 
-- `git clone https://github.com/Ridgal/Currency-table.git` - Для копирования проекта на локальный пк по https;
+- `git clone https://github.com/Ridgal/Currency-table.git`
 - `npm install`
 
 ### Команды:
