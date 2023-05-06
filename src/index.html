@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="icon" href="image/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="image/favicon.png" type="image.png"> -->
-  <title>Quiz</title>
+  <link rel="icon" href="image/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="image/favicon.png" type="image/png">
+  <title>Webpack</title>
 </head>
 <body>
   <div class="container">
@@ -16,13 +16,85 @@
           <h1>Подберём вуз мечты</h1>
           <p>Ответьте на 8 простых вопросов, и мы составим <br /> список наиболее подходящих для вас вузов</p>
         </header>
-        <div class="inner__thumbnail">
-          
-        </div>
+        <div class="inner__thumbnail"></div>
       </div>
       <section class="quiz">
-        <div>
-          
+        <div class="step_one">
+          <div class="step_one_title">
+            <h3>Для кого вы ищете учебное заведение?</h3>
+            <p>Шаг 1/9</p>
+          </div>
+          <div class="step_one_col">
+            <div>
+              <div class="step_one_radio">
+                <label for="step_one_radio-1">Себе</label>
+                <input id="step_one_radio-1" type="radio" name="radio" value="1" checked/>
+              </div>
+              <div class="step_one_radio">
+                <label for="step_one_radio-2">Родственнику</label>
+                <input id="step_one_radio-2" type="radio" name="radio" value="2"/>
+              </div>
+              <div class="step_one_radio">
+                <label for="step_one_radio-3">Ребёнку</label>
+                <input id="step_one_radio-3" type="radio" name="radio" value="3"/>
+              </div>
+            </div>
+            <div>
+              <div class="step_one_radio">
+                <label for="step_one_radio-4">Супругу/Супруге</label>
+                <input id="step_one_radio-4" type="radio" name="radio" value="4"/>
+              </div>
+              <div class="step_one_radio">
+                <label for="step_one_radio-5">Коллеге</label>
+                <input id="step_one_radio-5" type="radio" name="radio" value="5"/>
+              </div>
+              <div class="step_one_radio">
+                <label for="step_one_radio-6">Другое</label>
+                <input id="step_one_radio-6" type="radio" name="radio" value="6"/>
+              </div>
+            </div>
+          </div>
+          <div class="step_one_footer">
+            <button>Далее</button>
+          </div>
+        </div>
+
+        <div class="step_two">
+          <div class="step_two_title">
+            <h3>В каком городе планируете поступать?</h3>
+            <p>Шаг 2/9</p>
+          </div>
+          <div class="step_two_select">
+            <!-- <div class="select">
+              <span class="select-describe">Город</span>
+              <span class="select__mark select__mark-none_active"></span>
+              <select name="language">
+                <option value="HTML">Санкт-Петербург</option>
+                <option value="HTML">Москва</option>
+                <option value="JavaScript">Новосибириск</option>
+                <option value="PHP">Нижний новгород</option>
+                <option value="PHP">Екатеринбург</option>
+                <option value="PHP">Краснодар</option>
+                <option disabled>Любая</option>
+              </select>
+            </div>
+            <div class="select_custom select_custom-none_active" id="element">
+              <div class="select_custom__custom">
+                <div class="select_custom__choice custom-mark">Санкт-Петербург</div>
+                <div class="select_custom__options">
+                  <div class="select_custom__option custom-mark">Москва</div>
+                  <div class="select_custom__option custom-mark">Новосибириск</div>
+                  <div class="select_custom__option custom-mark">Нижний новгород</div>
+                  <div class="select_custom__option custom-mark">Екатеринбург</div>
+                  <div class="select_custom__option custom-mark">Екатеринбург</div>
+                  <div class="select_custom__option custom-mark">Краснодар</div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <div class="step_two_footer">
+            <button>Далее</button>
+          </div>
         </div>
       </section>
     </main>

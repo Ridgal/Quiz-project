@@ -4,7 +4,6 @@ const path = require('path');
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
-
 const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
 
@@ -39,10 +38,11 @@ module.exports = {
         loader: 'html-loader',
       },
       {
-        test: /\.css$/i,
+        test: /\.(c|sa|sc)ss$/i,
         use: [
           devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-          "css-loader"
+          'css-loader',
+          'sass-loader'
         ],
       },
       {
@@ -53,30 +53,32 @@ module.exports = {
         }
       },
       {
-        test: /\.(jpe?g | png | webp | gif | svg)$/i,
-        use: {
-          loader: 'image-webpack-loader',
-          options: {
-            mozjpeg: {
-              progressive: true,
-            },
-            // optipng.enabled: false will disable optipng
-            optipng: {
-              enabled: false,
-            },
-            pngquant: {
-              quality: [0.65, 0.90],
-              speed: 4
-            },
-            gifsicle: {
-              interlaced: false,
-            },
-            // the webp option will enable WEBP
-            webp: {
-              quality: 75
-            }
-          }
-        },
+        test: /\.(jpe?g|png|webp|gif|svg)$/i,
+        use: devMode
+          ? []
+          : [
+              {
+                loader: 'image-webpack-loader',
+                options: {
+                  mozjpeg: {
+                    progressive: true,
+                  },
+                  optipng: {
+                    enabled: false,
+                  },
+                  pngquant: {
+                    quality: [0.65, 0.9],
+                    speed: 4,
+                  },
+                  gifsicle: {
+                    interlaced: false,
+                  },
+                  webp: {
+                    quality: 75,
+                  },
+                },
+              },
+            ],
         type: 'asset/resource',
       },
       {
