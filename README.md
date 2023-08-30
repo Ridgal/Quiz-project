@@ -2,9 +2,9 @@
 
 ### Установка:
 
-Для установки на ваш компьютер нужно на локальном компьютере выполнить команду: 
+Для установки на ваш компьютер нужно выполнить команду: 
 
-- `git clone https://github.com/Ridgal/Currency-table.git`
+- `git clone https://github.com/Ridgal/Webpack-template.git`
 - `npm install`
 
 ### Команды:
